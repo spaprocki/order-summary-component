@@ -1,0 +1,209 @@
+@import url('https://fonts.googleapis.com/css2?family=Red+Hat+Display:wght@500;700;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;700&display=swap');
+
+/* Design system styles */
+
+:root {
+  --pale-blue: hsl(225, 100%, 94%);
+  --bright-blue: hsl(245, 75%, 52%);
+  --very-pale-blue: hsl(225, 100%, 98%);
+  --desaturated-blue: hsl(224, 23%, 55%);
+  --dark-blue: hsl(223, 47%, 23%);
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: var(--pale-blue);
+  font-family: 'Red Hat Display', 'sans-serif';
+  font-size: 16px;
+  display: grid;
+  place-content: center;
+  min-height: 100vh;
+  position: relative;
+  padding-bottom: 88px;
+}
+
+main {
+  display: grid;
+  place-content: center;
+  position: relative;
+  min-height: 100vh;
+  width: 100vw;
+}
+
+picture {
+  position: absolute;
+  top: 0;
+  width: 100%;
+  height: auto;
+  z-index: -1;
+  object-fit: cover;
+  object-position: left top;
+}
+
+picture img {
+  width: 100%;
+}
+
+.card-container {
+  background: #fff;
+  box-shadow: 0px 40px 40px -20px rgba(13, 48, 189, 0.151826);
+  border-radius: 20px;
+  width: clamp(327px, 87.2vw, 450px);
+  height: auto;
+  color: var(--soft-blue);
+  overflow: hidden;
+}
+
+.hero-img {
+  width: 100%;
+}
+
+.text-section {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: clamp(32px, 8.53vw, 45px) clamp(24px, 6.4vw, 48px)
+    clamp(32px, 8.53vw, 48px) clamp(24px, 6.4vw, 48px);
+}
+
+.summary-header {
+  font-weight: 900;
+  font-size: clamp(22px, 5.86vw, 28px);
+  line-height: clamp(29px, 7.73vw, 37px);
+  text-align: center;
+  color: var(--dark-blue);
+}
+
+.summary-text {
+  font-weight: 500;
+  font-size: clamp(15px, 4vw, 16px);
+  line-height: clamp(25px, 6.67vw, 26px);
+  text-align: center;
+  color: var(--desaturated-blue);
+  margin-top: clamp(16px, 4.27vw, 17px);
+}
+
+.plan-container {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  background-color: var(--very-pale-blue);
+  border-radius: 11px;
+  width: 100%;
+  margin-top: 24px;
+  padding: clamp(16px, 4.27vw, 24px);
+}
+
+.music-icon {
+  width: 48px;
+  height: 48px;
+  margin-right: 20px;
+}
+
+.plan-and-price {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  margin-right: 50px;
+}
+
+.plan {
+  font-weight: 900;
+  font-size: clamp(14px, 3.73vw, 16px);
+  line-height: clamp(19px, 5vw, 21px);
+  color: var(--dark-blue);
+  margin-bottom: clamp(3px, 0.8vw, 6px);
+}
+
+.price {
+  font-weight: 500;
+  font-size: clamp(14px, 3.73vw, 16px);
+  line-height: clamp(19px, 5vw, 21px);
+  color: var(--desaturated-blue);
+  justify-self: flex-end;
+}
+
+.change {
+  font-weight: 700;
+  font-size: clamp(13px, 3.47vw, 14px);
+  line-height: clamp(17px, 4.53vw, 19px);
+  text-decoration-line: underline;
+  margin-right: 0px;
+  margin-left: auto;
+  color: var(--bright-blue);
+  text-align: right;
+  width: fit-content;
+}
+
+.change:hover {
+  text-decoration-line: none;
+  color: hsla(245, 83%, 68%, 1);
+}
+
+.proceed {
+  width: 100%;
+  background: var(--bright-blue);
+  box-shadow: 0px 20px 20px rgba(56, 42, 225, 0.190291);
+  border: none;
+  border-radius: 11px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: clamp(24px, 6.4vw, 32px);
+  padding: 15px 0;
+  font-family: inherit;
+  font-weight: 700;
+  font-size: 15px;
+  line-height: 20px;
+  color: #ffffff;
+  cursor: pointer;
+}
+
+.proceed:hover {
+  background: hsla(245, 83%, 68%, 1);
+}
+
+.cancel {
+  font-family: inherit;
+  font-weight: 700;
+  font-size: 15px;
+  line-height: 20px;
+  color: var(--desaturated-blue);
+  border: none;
+  background: transparent;
+  margin-top: clamp(24px, 6.4vw, 32px);
+  cursor: pointer;
+  width: 100px;
+}
+
+.cancel:hover {
+  color: var(--dark-blue);
+}
+
+.attribution {
+  font-family: 'Montserrat', 'sans-serif';
+  position: absolute;
+  padding: 10px;
+  bottom: 0px;
+  width: 100%;
+  text-align: center;
+  color: var(--bright-blue);
+}
+
+.attribution a,
+.attribution a:visited {
+  text-decoration: underline;
+  color: var(--bright-blue);
+}
+
+.attribution a:hover {
+  font-weight: 500;
+}
